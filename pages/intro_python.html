@@ -60,16 +60,17 @@
                     je suppose certains prérequis. Premièrement je considère que
                     vous savez ce qu'est un langage de programmation et que Python
                     est déjà installé sur votre ordinateur. Si ce n'est pas le cas
-                    il existe déjà de nombreuses explications sur internet. Pour
+                    il existe déjà de nombreuses explications sur internet notamment
+                    <a href="https://www.python.org/downloads/" target="_blank">ici</a>. Pour
                     ma part je travaille sur Ubuntu avec Python2.7 mais vous pouvez
-                    utiliser la version 2.3, je tenterai d'expliquer les différences
+                    utiliser la version 3, je tenterai d'expliquer les différences
                     aux moments adéquats. Selon moi une personne connaissant Python2.7
                     saura très bien faire du Python3, l'inverse n'est pas toujours
                     vrai et nous verrons pourquoi.</p>
                 </header>
                 <footer>
                     <p>Vous avez tout ce qu'il faut maintenant alors c'est parti!</p>
-                    <a href="#projects" class="button big scrolly">Commencer</a>
+                    <a href="#corps" class="button big scrolly">Commencer</a>
                 </footer>
             </article>
         </div>
@@ -80,20 +81,274 @@
             <article id="corps">
                 <header>
                     <h2>Cours du jour</h2>
+                    <p class="blabla">C'est parti pour la leçon du jour. Au programme:
+                    les généralités de ce langage, un nouvel interpréteur et la découverte
+                    des types et des variables. Plus globalement nous répondrons à la
+                    question: qu'est-ce que Python?</p>
+
                     <div>
                         <h3>Langage interprété</h3>
-                        <!--<p class="blabla">langage interprété (expliquer), interpréteur basique,-->
-                        <!--bpython/ipython-->
+                        <p class="blabla">Il faut d'abord savoir qu'il existe deux types
+                        types de langages: interprété ou compilé! Grossièrement un langage
+                        compilé doit, avant d'être exécuter, être traduit en binaire (un
+                        autre langage). Un langage interprété quant à lui va le traduire
+                        au fur et à mesure. Comme vous pouvez vous en douter avec le titre
+                        Python est <b>interprété</b> !</p>
 
-                        <!--Insérer images</p>-->
+                        <p class="blabla">Afin de l'utiliser il faut donc un <i>interpréteur</i>.
+                        Ce dernier récupère les instructions que nous lui donnons et les effectue
+                        directement. Pour avoir votre premier interpréteur il vous suffit d'entrer
+                        <code>$ python</code> dans votre terminal. Vous êtes alors dans votre
+                        interpréteur que vous pouvez quitter avec la commande <code>>>> quit()</code>
+                        (ce qui est plutôt utile). Il s'agit de l'interpréteur basique, il
+                        fonctionne très bien mais j'ai mieux à vous proposer... ;)</p>
+
+                        <p class="blabla">Le problème de l'interpréteur basique est qu'il n'y a
+                        ni autocomplétion ni de coloration syntaxique, ce qui n'est pas super
+                        agréable. Je vous conseille donc d'utiliser <b>bpython</b> ou
+                        <b>ipython</b> qui sont deux excellents outils. Nous utiliserons
+                        <i>bpython</i> mais sachez que <i>ipython</i> possède énormément de
+                        fonctions très intéressantes mais j'en parlerai plus tard avec
+                        <a href="http://jupyter.org/" target="_blank">Jupyter</a>. De plus
+                        <i>bpython</i> est plus simple et suffira largement pour ce que nous
+                        allons faire! Pour l'installer vous pouvez suivre les indications
+                        <a href="https://bpython-interpreter.org/downloads.html" target="_blank">ici</a>.
+                        Bien entendu vous pouvez très bien garder l'interpréteur initial, il
+                        sera juste moins agréable à utiliser...</p>
+
+                        <p>Vous avez votre interpréteur? Que les choses sérieuses commencent!</p>
                     </div>
+
                     <div>
                         <h3>Notions générales</h3>
+                        <p class="blabla">Parlons peu, parlons Python! Afin de savoir utiliser
+                        un outil il faut, selon moi, le comprendre un minimum. Je ne vais pas
+                        rentrer dans des détails très pointus (que je ne maitrises pas forcément)
+                        mais je vais tenter de vous apprendre certaines choses sur ce langage.
+                        Premièrement il faut savoir qu'il existe plusieurs Python. Oui je sais
+                        c'est un peu bizarre mais l'implémentation de référence est <b>CPython</b>.
+                        C'est un interpréteur de bytecode écrit en <i>C</i>. Cependant, il en
+                        existe d'autres comme Jython pour Java, Pyfort pour Fortran ou PyPy pour
+                        Python. Oui, cette dernière est une mise en œuvre de Python... Avec
+                        elle-même. Je vous laisse faire plus de recherches si vous êtes intéressés.</p>
+
+                        <p class="blabla">La deuxième particularité est son typage. Python
+                        est un langage au <b>typage</b> fort et dynamique. Qu'est-ce que ça signifie?
+                        Pour ceux qui ne connaissent pas il y a les typages fort ou faible et
+                        statique ou dynamique. La plus part des langages distinguent un entier
+                        naturel (int[eger]) et les réels (float), les caractères simples et les
+                        chaines de caractères, etc. On dit qu'ils sont fortement typés
+                        (<i>exemple: C++</i>), à l'inverse ceux qui le sont faiblement considèrent
+                        les variables 'juste' comme des nombres ou une autre catégorie regroupant
+                        plusieurs types (<i>exemple: JavaScript</i>). Ensuite il peut être statique,
+                        c'est à dire qu'une fois la variable créée elle a un type fixe qui ne
+                        changera pas. A l'inverse avec un typage dynamique un objet peut très bien
+                        changer par l'appelle d'une fonction par exemple. Ceci dépend de la
+                        <b>muabilité</b>...</p>
+
+                        <p class="blabla">La quoi??? La muabilité! Je sais le nom est barbare mais
+                        c'est quelque chose d'assez simple. Déjà il faut savoir que Python est un
+                        langage <i>introsectif</i>: c'est-à-dire que tout est objet! Il s'agit un
+                        conteneur qui a différentes informations et fonctions. Nous reverrons ça dans
+                        une prochaine leçon... Revenons pour le moment aux termes 'muable' et
+                        'immuable'. Immuable signifie juste que la variable ne change pas en appelant
+                        une fonction dessus, la valeur reste donc la même tandis qu'un objet muable
+                        va changer de valeur 'in place'. Il est important d'avoir cette précision
+                        lors de l'utilisation d'un type afin d'éviter les mauvaises surprises. Mais
+                        comment on sait si un type est muable ou pas? Et bien il existe des fonctions
+                        'spéciales' qui s'écrivent comme ceci: <code>__nomfunction__</code>. Il
+                        s'agit de fonctions "cachées" que nous n'appelons (sauf cas spéciaux) jamais
+                        directement mais par d'autres moyens. Par exemple le <code>+</code> appelle
+                        en réalité <code>__add__</code>. Et bien il faut savoir que les types
+                        immuables ont la fonction <code>__hash__</code> ce qui n'est pas le cas
+                        pour la plupart des muables.
+                        </p>
+
+                         <p class="blabla">Ok, c'est très bien tout ça mais comment je fais comment
+                         pour voir les fonctions d'une classe? Et bien je vous présente deux amies:
+                         les fonctions <code>dir()</code> et <code>help()</code>! Commençons par
+                         le plus évident: <code>help()</code> permet d'obtenir la documentation
+                         liée à un objet, classe ou fonction. <code>dir()</code> quant à lui permet
+                         de voir toutes les méthodes normales et spéciales. Voici un petit exemple:</p>
+
+                         <p class="code">
+                            >>> dir("mot") </br>
+                            ['__add__', '__class__', ..., ''__hash__', '__init__', ..., 'upper',
+                            'zfill'] </br></br>
+                            >>> help("mot".upper) </br>
+                                S.upper() -> string </b>
+                                Return a copy of the string S converted to uppercase.
+                        </p>
+
+
+                        <p>Bon parler c'est bien joli mais si on codait?</p>
                     </div>
+
                     <div>
-                        <h3>Types et variables</h3>
+                        <h3>Premières instructions</h3>
+                        <p class="blabla">Maintenant nous allons être un peu plus actif, lancer
+                        <code>$ bpython</code> dans votre terminal et on va travailler un peu!
+                        Le but est de découvrir les types principaux, voir les premières normes
+                        syntaxiques et singularités. Aller, on commence avec quelque chose de
+                        super simple: les chaines de caractères! En anglais on le traduit part
+                        <i>string</i> ce qui est raccourci en <code>str</code>.</p>
+                        <p class="code">
+                        >>> my_string = "My name is FtZzy !" </br></br>
+                        >>> dir(my_string) </br>
+                        ['__add__', '__class__', '__contains__', '__delattr__', '__doc__',
+                        '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__',
+                        '__getnewargs__', '__getslice__', '__gt__', '__hash__', '__init__',
+                        '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__',
+                        '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__',
+                        '__setattr__', '__sizeof__', '__str__', '__subclasshook__',
+                        '_formatter_field_name_split', '_formatter_parser', 'capitalize', 'center',
+                        'count', 'decode', 'encode', 'endswith', 'expandtabs', 'find', 'format',
+                        'index', 'isalnum', 'isalpha', 'isdigit', 'islower', 'isspace', 'istitle',
+                        'isupper', 'join', 'ljust', 'lower', 'lstrip', 'partition', 'replace',
+                        'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split',
+                        'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate',
+                        'upper', 'zfill']
+                        </p>
+
+                        <p class="blabla">Alors c'est un nouveau type donc premier réflexe: muable
+                        ou non? On retrouve le fameux <code>__hash__</code> donc on dirait que non.
+                        Nous nous intéressons par exemple à la fonction <code>lower()</code>.</p>
+
+                        <p class="code">
+                        >>> help(my_string.lower) </br>
+                        S.lower() -> string </br>
+                        Return a copy of the string S converted to lowercase. </br></br>
+                        >>> my_string.lower() </br>
+                        'my name is ftzzy !' </br></br>
+                        >>> my_string </br>
+                        "My name is FtZzy !"
+                        </p>
+
+                        <p class="blabla">On voit donc qu'appliquer la fonction sur la chaine
+                        ne la change pas, les strings sont donc bel et bien immuables. C'est
+                        une routine intéressante et presque indispensable à faire à chaque fois.
+                        Ça vous évitera d'aller sur internet un bon nombre de fois. Je ne m'attarde
+                        pas plus sur les chaines de caractères car nous aurons l'occasion de les
+                        revoir plus tard. Passons plutôt à un autre type souvent utilisé: les
+                        listes.</p>
+
+                        <p class="code">
+                        >>> my_list = [] </br></br>
+                        >>> dir(my_list) </br>
+                        ['__add__', '__class__', '__contains__', '__delattr__', '__delitem__',
+                        '__delslice__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__',
+                        '__getitem__', '__getslice__', '__gt__', '__hash__', '__iadd__', '__imul__',
+                        '__init__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__',
+                        '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__',
+                        '__setattr__', '__setitem__', '__setslice__', '__sizeof__', '__str__',
+                        '__subclasshook__', 'append', 'count', 'extend', 'index', 'insert', 'pop',
+                        'remove', 'reverse', 'sort']  </br></br>
+                        >>> help(my_list.append) </br>
+                        L.append(object) -- append object to end </br></br>
+                        >>> my_list.append(1) </br></br>
+                        >>> my_list </br>
+                        [1]</br></br>
+                        >>> # Ceci est un commentaire </br>
+                        >>> # my_list a changé de valeur: les listes sont donc muables !</br></br>
+                        >>> second_list = my_list </br></br>
+                        >>> my_list.insert(0, "0 indique la 1e case") </br></br>
+                        >>> my_list </br>
+                        ['0 indique la 1e case', 1] </br></br>
+                        >>> second_list </br>
+                        ['0 indique la 1e case', 1] </br></br>
+                        >>> second_list.pop() </br>
+                        1 </br></br>
+                        >>> my_list </br>
+                        ['0 indique la 1e case'] </br></br>
+                        >>> second_list </br>
+                        ['0 indique la 1e case']
+                        </p>
+
+                        <p class="blabla">Oulala, que s'est-il passé? Je n'ai modifié que
+                        <code>my_list</code> mais <code>second_list</code> l'a aussi été... Et
+                        bien c'est normal! Lors de la déclaration d'une variable il réserve un
+                        espace dans la mémoire et on peut récupérer cette valeur via la fonction
+                        <code>id()</code>, dans mon cas <code>id(my_list)</code> vaut
+                        <code>139812943134088</code>, tout comme <code>id(second_list)</code>.
+                        C'est parce que l'opérateur <code>=</code> ne fait rien d'autre que créer
+                        une référence au même objet, d'où le même id: c'est une <b>shallow copy</b>.
+                        Afin de comparer deux objets nous avons le mot clé <code>is</code> qui
+                        regarde les id, contrairement à <code>==</code> qui compare les valeurs. On
+                        en reparlera un peu plus loin dans cette leçon.
+                        Si vous souhaitez créer un objet totalement indépendant vous pouvez utiliser
+                        le constructeur <code>third_list = list(my_list)</code>. Les identifiants
+                        sont maintenant différents. Poussons le problème encore plus loin: et si
+                        une liste contient d'autres listes? Et bien on va tester!
+                        </p>
+
+                        <p class="code">
+                        >>> first_big_list = [[0, 1], ['a', 'b']] </br></br>
+                        >>> second_big_list = list(first_big_list) </br></br>
+                        >>> second_big_list is first_big_list   # 2 objets différents</br>
+                        False </br></br>
+                        >>> first_big_list[0] = "Hey" </br></br>
+                        >>> first_big_list </br>
+                        ['Hey', ['a', 'b']] </br></br>
+                        >>> second_big_list </br>
+                        [[0, 1], ['a', 'b']] </br></br>
+                        >>> # Normal jusqu'à maintenant... </br></br>
+                        >>> first_big_list[1][0] = "ici" </br></br>
+                        >>> first_big_list </br>
+                        ['Hey', ['ici', 'b']] </br></br>
+                        >>> second_big_list </br>
+                        [[0, 1], ['ici', 'b']]
+                        </p>
+
+                        <p class="blabla">Et bien le constructeur de liste effectue une copie de
+                        la liste de et ses valeurs. Cependant ces valeurs sont elles-mêmes des
+                        listes. Globalement <code>list()</code> donne un id différent aux 'big_lists',
+                        or elles se réfèrent toutes les deux à d'autres listes qui ont le même id.
+                        C'est pourquoi modifier une des sous-listes dans l'un la modifie aussi dans
+                        l'autre! Afin de faire la copie espérée récursivement on utilise une <b>deep
+                        copy</b>, que je vous propose de voir lors d'un prochain cours sur les
+                        collections et les <code>import</code>. En attendant tout est bien expliqué
+                        sur <a href="https://stackoverflow.com/questions/184710/what-is-the-difference-between-a-deep-copy-and-a-shallow-copy" target="_blank">stackoverflow</a>.
+                        </p>
+
+                        <p class="blabla">Pour finir avec les types d'aujourd'hui on va parler des
+                        booléens, une particularité de Python. Effectivement en Python <b>tout est
+                        VRAI</b> sauf 0, False, None (objet nul) et les conteneur vide
+                        (<i>exemples:</i> [], "", {}, ...) grâce à la fonction
+                        <code>__nonzero__</code>. Nous pouvons donc écrire les choses suivantes,
+                        que nous aurons la chance de revoir.
+                        </p>
+
+                        <p class="code">
+                        >>> if []: </br>
+                        . . . . . . print("Jamais affiché") </br>
+                        . . . elif "a": </br>
+                        . . . . . . print("Yeah !") </br>
+                        Yeah !
+                        </p>
+
+                    </div>
+
+                    <div>
+                        <h3>Norme de syntaxe</h3>
+                        <p class="blabla">Je finirai ce petit cours (déjà bien rempli) avec les
+                        normes de langage. Ce que je n'ai pas dit c'est que Python est un langage
+                        communautaire et afin que tout le monde puisse facilement s'approprier le
+                        code des autres ils ont défini des normes d'écriture: PEP8. Bien entendu
+                        si vous ne les suivez pas votre programme fonctionnera mais c'est une bonne
+                        pratique de s'y habituer dès le début. Vous pouvez ajouter une vérification
+                        sur votre éditeur de code facilement, ou les apprendre par coeur
+                        <a href="https://www.python.org/dev/peps/pep-0008/" target="_blank">
+                        ici</a> ;). Après il existe également la
+                        <a href="https://pypi.python.org/pypi/autopep8" target="_blank">commande</a>
+                        <code>$ autopep8</code> qui permet de transformer un fichier afin de le rendre
+                        PEP8. Je ne ferai pas la liste des bonnes manières mais je vous laisse y jeter
+                        un œil.</p>
                     </div>
                 </header>
+                <footer>
+                    <p>Bravo, tu as fini cette leçon! Tu te souviens de l'essentiel?</p>
+                    <a href="#resume" class="button big scrolly">Revoir le principal</a>
+                </footer>
             </article>
         </div>
 
@@ -103,13 +358,20 @@
             <article id="resume" class="container 75%">
                 <header>
                     <h2>Résumé</h2>
-                    <p>Résumer ici.</p>
+                    <p>Aller on fait une petite liste des choses abordées et si ça ne vous dit
+                    rien alors revenez dessus! Python est donc un langage interprété qui nous
+                    avons utilisé avec bpython. Il bénéficie d'un typage fort et dynamique. Dans
+                    ce langage tout est objet, certains sont muables et d'autres non. Nous avons vu
+                    les fonctions <code>dir()</code> et <code>help()</code> qui nous ont aidés
+                    à découvrir les strings et les listes. On a vu avec cette dernières les différences
+                    de copies. Enfin on a fini avec les booléens, un outil dont vous ne soupçonnés pas
+                    encore le pouvoir, et PEP8.</p>
                 </header>
-                <p>Ça vous a plu? Regarder le cours suivant.</p>
+                <p>Ça vous a plu? Regarder la suite.</p>
                 <a href="../index.html#projects" class="button big scrolly">Cours suivant</a>
                 <footer>
                     <ul id="copyright">
-                        <li>&copy; nathan krupa. tous droits réservés.</li>
+                        <li>&copy; Nathan Krupa. Tous droits réservés.</li>
                         <li>design: <a href="http://html5up.net">html5 up</a></li>
                     </ul>
                 </footer>

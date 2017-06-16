@@ -9,7 +9,7 @@
 
 /* Reset */
 
-	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, blockquote, pre, a, abbr, acronym, address, big, cite, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
 		padding: 0;
 		border: 0;
@@ -23,6 +23,23 @@
         margin-right: 6em;
         font-size: 1.25em;
         text-align: left;
+    }
+    
+    p.code{
+        margin-left: 6em;
+        margin-right: 6em;
+        text-align: left;
+        border: 1px solid black;
+        color: black;
+        font-size: large;
+        font-family: "Times New Roman";
+        line-height: 100%;
+    }
+
+    code {
+        color: black;
+        font-size: large;
+        font-family: "Times New Roman";
     }
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {

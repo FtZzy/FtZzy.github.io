@@ -1,11 +1,9 @@
-FtZzy.github.io
-===============
+# FtZzy.github.io
 
 The source code of [https://ftzzy.github.io/](https://ftzzy.github.io/).
 
 
-Template
---------
+## Template
 
 Miniport by HTML5 UP
 html5up.net | @ajlkn
@@ -25,8 +23,7 @@ aj@lkn.io | @ajlkn
 PS: Not sure how to get that contact form working? Give formspree.io a try (it's awesome).
 
 
-Credits
--------
+## Credits
 
 	Demo Images:
 		Unsplash (unsplash.com)
@@ -42,3 +39,8 @@ Credits
 		jquery.scrolly (@ajlkn)
 		jquery.dropotron (@ajlkn)
 		Skel (skel.io)
+
+
+
+# LICENSE
+Copyright (c) 2017 [Krupa Nathan](https://github.com/FtZzy)
