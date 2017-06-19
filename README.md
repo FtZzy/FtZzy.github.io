@@ -1,6 +1,6 @@
 # FtZzy.github.io
 
-The source code of [https://ftzzy.github.io/](https://ftzzy.github.io/).
+The source code of [https://ftzzy.github.io/](https://ftzzy.github.io/) (in French).
 
 
 ## Template

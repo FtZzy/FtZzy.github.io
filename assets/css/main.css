@@ -19,21 +19,22 @@
 	}
 
     p.blabla {
-        margin-left: 6em;
-        margin-right: 6em;
+        margin-left: 2em;
+        margin-right: 2em;
         font-size: 1.25em;
         text-align: left;
     }
-    
+
     p.code{
-        margin-left: 6em;
-        margin-right: 6em;
+        margin-left: 3em;
+        margin-right: 3em;
         text-align: left;
+        line-height: 100%;
         border: 1px solid black;
-        color: black;
         font-size: large;
         font-family: "Times New Roman";
-        line-height: 100%;
+        color: black;
+        background-color: #ddd
     }
 
     code {
